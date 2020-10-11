@@ -34,3 +34,8 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: PublishBuildArtifacts@1
+ # download the artifact drop from the previous job
+- task: DownloadBuildArtifacts@0
+  inputs:
+    artifactName: drop
+    downloadPath: '$(System.DefaultWorkingDirectory)'
