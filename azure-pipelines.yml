@@ -35,8 +35,8 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-   PathtoPublish: '$(build.artifactStagingDirectory)'
-   ArtifactName: 'drop'
+   PathtoPublish: '$(build.DefaultWorkingDirectory)'
+   ArtifactName: 'drop' 
  # download the artifact drop from the previous job
 #- task: DownloadBuildArtifacts@0
  # inputs:
